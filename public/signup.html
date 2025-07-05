@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="log-container">
+        <div class="head">
+            <h1 class="head-form">Welcome Back to Carbie!</h1>
+            <h1 class="subhead">Your Friendly Carbon Tracker</h1>
+        </div>
+
+        <div class="form-container">
+      <form id="form-signup">
+        <div class="form">
+          <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            class="log-input"
+            placeholder="Your Nickname"
+            required
+          >
+        </div>
+        <div class="form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="log-input"
+            placeholder="Your Email"
+            required
+          >
+        </div>
+        <div class="form">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="log-input"
+            placeholder="New Password"
+            required
+          >
+        </div>
+        <div class="form">
+          <input
+            type="password"
+            id="password_confirmation"
+            name="password_confirmation"
+            class="log-input"
+            placeholder="Confirm New Password"
+            required
+          >
+        </div>
+
+    <div class="divider-container">
+    <div class="divider-line"></div>
+    <span class="divider-text">or</span>
+    <div class="divider-line"></div>
+    </div>
+
+        <div class="form"> 
+            <button class="guest-mode">Guest Mode</button>
+        </div>
+    </div>
+
+        <div class="button-container">
+            <button class="cancel-button" onclick="location.href='introduction.html'">Cancel</button>
+            <button type="submit" class="login-button">Sign Up</button>
+        </div>
+
+        <div class="signup-link">
+            <p class="signup-link">Have an account? <a href="login.html">Log In Here</a></p>
+        </div>
+
+    </div>
+
+    <script>
+    const API = '/api';
+
+    // Jika sudah pernah register/login, langsung ke dashboard
+    if (localStorage.getItem('carbie_token')) {
+      window.location.href = '/home2.html';
+    }
+
+    // Handle form submit
+    $('#form-signup').on('submit', function(e) {
+      e.preventDefault();
+      const payload = {
+        nickname:              $('#nickname').val().trim(),
+        email:                 $('#email').val().trim(),
+        password:              $('#password').val().trim(),
+        password_confirmation: $('#password_confirmation').val().trim()
+      };
+
+      $.ajax({
+        url:    `${API}/register`,
+        method: 'POST',
+        data:   payload,
+        success(res) {
+          localStorage.setItem('carbie_token', res.data.token);
+          window.location.href = '/home2.html';
+        },
+        error(xhr) {
+          const errs = xhr.responseJSON?.errors;
+          const msg = errs
+            ? Object.values(errs).flat().join('\n')
+            : xhr.responseJSON?.message || 'Registrasi gagal';
+          alert(msg);
+        }
+      });
+    });
+
+    // Clear form fields
+    $('#btn-cancel').on('click', () => {
+      $('#nickname, #email, #password, #password_confirmation').val('');
+    });
+
+    // Guest mode
+    $('#btn-guest').on('click', () => {
+      window.location.href = '/home2.html';
+    });
+  </script>
+</body>
+</html>

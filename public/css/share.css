@@ -1,0 +1,114 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+#share-popup-component {
+    display: flex;
+    justify-content: center;
+}
+
+#share-popup {
+    background-image: url("../image/ShareBackground.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 500px;
+    width: 674px;
+    padding: 20px 5px;
+    font-weight: 500px;
+    box-sizing: border-box;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#share-popup h2 {
+    color: #fff;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #DCAC3D;
+}
+
+#share-popup hr {
+    border: 1px solid #fff;
+    width: 80%;
+}
+
+#share-popup h4 {
+    color: #fff;
+    font-weight: 500px;
+}
+
+#share-popup h4:nth-child(2) {
+    color: #DCAC3D;
+    font-weight: 600;
+}
+
+#share-popup h4:nth-child(2) span, #share-popup h4:nth-child(2) sub {
+    color: #3C6E47;
+    font-weight: 600;
+}
+
+#share-popup h5 {
+    color: #fff;
+    font-weight: 500;
+}
+
+#total-carbon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 2px 2px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#total-carbon img {
+    margin-right: 8px;
+}
+
+#share-button-component {
+    display: flex;
+    justify-content: right;
+    margin: 70px;
+}
+
+#share-button-component button {
+    border: none;
+    margin: 10px;
+    padding: 4px 12px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 28px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+#share-button {
+    color: #fff;
+    background-color: #DCAC3D;
+}
+
+#share-button:hover {
+    background-color: #EFE1BF;
+    color: #DCAC3D;
+}
+
+#share-cancel-button:hover {
+    background-color: #d3d1d1;
+    color: #fff;
+}

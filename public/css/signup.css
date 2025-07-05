@@ -1,0 +1,291 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.head {
+    margin-top: 20px;
+  text-align: center;
+   margin: 0 auto 15px;
+
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../image/Background2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+
+.head-form {
+  color: #3C6E47;
+  font-size: xx-large;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px; 
+}
+
+.subhead {
+  color: black;
+  font-size: medium;
+  font-style: italic;
+  margin-bottom: 0px; 
+}
+
+.log-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #3C6E47; 
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  box-sizing: border-box; /* Penting! */
+}
+
+.log-input::placeholder {
+  color: #aaa; 
+  font-weight: 300;
+}
+
+.log-input:focus {
+  border-color: #3C6E47; 
+  box-shadow: 0 0 4px rgba(60, 110, 71, 0.4);
+}
+
+.log-container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 60px;
+    padding-right: 90px;
+    max-width: 800px;
+    margin: 20px auto;
+    gap: 15px;
+    padding: 12px 60px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+.head-form {
+    color: #3C6E47;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.subhead {
+    color: black;
+    font-size: medium;
+    font-style: italic;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.batasan {
+    background-color: #DCAC3D;
+    padding: 5px 5px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    
+}
+
+.guest-mode {
+    background-color: #3C6E47;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    align-content: center;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 60px;
+
+}
+
+.guest-mode:hover {
+    background-color: #DAE5C7;
+    color: #3C6E47;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cancel-button {
+    background-color: white;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 10px 75px;
+}
+
+.cancel-button:hover {
+    background-color: #f5f5f5;
+}
+
+.login-button {
+    background-color: #DCAC3D;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  padding: 10px 75px;
+}
+
+.login-button:hover {
+    background-color: #c7992e;
+}
+
+.signup-link {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #3C6E47;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 380px; 
+    margin: 0 auto;
+}
+
+.form {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px; 
+  margin: 10px auto;
+}
+
+.divider-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider-text {
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #DCAC3D;
+  font-size: 14px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #DCAC3D;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/*reset style*/
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

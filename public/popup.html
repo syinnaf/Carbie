@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop up</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="container-pop">
+
+<div class="sidebar">
+    <button class="tab-button active" data-tab="profile" data-icon="Profile">
+        <img src="image/Profile-Secondary.svg" class="icon-sidebar" alt="profile" />
+        User Profile
+    </button>
+    <button class="tab-button" data-tab="security" data-icon="Security">
+        <img src="image/Security-Primary.svg" class="icon-sidebar" alt="security" />
+        Security
+    </button>
+    <button class="tab-button" data-tab="preferences" data-icon="Preference">
+        <img src="image/Preference-Primary.svg" class="icon-sidebar" alt="preferences" />
+        Preferences
+    </button>
+    <button class="logout">
+        <img src="image/LogOut.svg" class="icon-sidebar logout-icon" alt="logout" />
+        Log Out
+    </button>
+</div>
+
+<div class="profile-content">
+    <div class="tab-content" id="tab-profile"> 
+    <div class="profile">
+    <div class="profile-container">
+        <img src="image/Carbie-Green.png" alt="icon" class="img-profile">
+    </div>
+        <div>
+            <h1 class="nickname" id="nickname">Nickname (Level xx)</h1>
+            <div class="progress-container">
+                <div class="progress-fill"></div>
+            </div>
+            <div style="font-size: 12px; margin-top: 5px;">145/200 exp</div>
+            <p>email user</p>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <label for="color-select" class="color-label">Change Profile Theme</label>
+        <select id="color-select" class="dropdown-color">
+        <option value="green">Green</option>
+        <option value="grey">Grey</option>
+        <option value="blue">Blue</option>
+        <option value="pink">Pink</option>
+        <option value="purple">Purple</option>
+        <option value="yellow">Yellow</option>
+    </select>
+</div>
+
+<div class="ganti-tema">
+    <label for="theme-select" class="theme-label">Choose Theme Color</label>
+    <select id="theme-select" class="theme-dropdown">
+    <option value="green">Green</option>
+    <option value="grey">Grey</option>
+    <option value="blue">Blue</option>
+    <option value="pink">Pink</option>
+    <option value="purple">Purple</option>
+    <option value="yellow">Yellow</option>
+    <option value="mint">Mint</option>
+    <option value="peach">Peach</option>
+</select>
+
+</div>
+
+    <h1 class="change-nickname">Change Nickname</h1>
+    <input type="text" id="nickname-input" placeholder="Type a new nickname..." />
+    <button type="submit" id="save-button">Save</button>
+</div>
+
+<div class="tab-content" id="tab-security" style="display: none;">
+        <h2 class="password">Change Password</h2>
+    <div class="pw-container">
+        <input type="password" placeholder="Type new password..." class="input-gold">
+        <input type="password" placeholder="Retype new password..." class="input-gold">
+        <button class="save-button-password">Save</button>
+    </div>
+        <h2 class="change-email">Change Email</h2>
+        <input type="email" placeholder="Type new email..." class="input-gold2">
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <input type="text" placeholder="Verification Code" class="input-gold2">
+            <button type="submit" class="get-code ">Get Code</button>
+        </div>
+        <button class="gold-btn" style="margin-top: 10px;">Save</button>
+    </div>
+
+<div class="tab-content" id="tab-preferences" style="display: none;">
+    <div class="dropdown">
+        <label for="language-select" class="color-label">Language</label>
+        <select id="language-select" class="dropdown-color">
+            <option value="english">English</option>
+            <option value="indonesia">Indonesia</option>
+        </select>
+    </div>
+
+    <div class="dropdown">
+        <label for="timezone-select" class="color-label">Time Zone</label>
+        <select id="timezone-select" class="dropdown-color">
+            <option value="wib">WIB (Western Indonesia Time)</option>
+            <option value="wita">WITA (Central Indonesia Time)</option>
+            <option value="wit">WIT (Eastern Indonesia Time)</option>
+        </select>
+    </div>
+
+    <h1 class="change-electricity">Electricity Provider (kWh) </h1>
+    <input type="text" id="electricity-input" placeholder="Enter your electricity provider..." class="input-gold"/>
+    <button type="submit" id="save-electricity" class="gold-btn">Save</button>
+</div>
+
+</div>
+    <script src="js/popup.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <scri
+</body>
+</html>

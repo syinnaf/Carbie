@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <link rel="stylesheet" href="css/popupTask.css">
+</head>
+<body>
+    <div class="container-pop">
+        <div class="sidebar">
+            <button class="tab-button active" data-tab="home-activity">
+                <img src="image/HomeActivity-Primary.svg" class="icon-sidebar" alt="Home Activity">
+                Home Activity
+            </button>
+            <button class="tab-button" data-tab="online-activity">
+                <img src="image/OnlineActivity-Primary.svg" class="icon-sidebar" alt="Online Activity">
+                Online Activity
+            </button>
+            <button class="tab-button" data-tab="going-out">
+                <img src="image/GoingOut-Primary.svg" class="icon-sidebar" alt="Going Out">
+                Going Out
+            </button>
+            <button class="tab-button" data-tab="buy-stuff">
+                <img src="image/BuyStuff-Primary.svg" class="icon-sidebar" alt="Buy Stuff">
+                Buy Stuff
+            </button>
+        </div>
+
+        <div class="profile-content">
+            <!-- Home Activity Tab -->
+            <div class="tab-content active" id="tab-home-activity">
+                <h2 class="label-task">Home Activity</h2>
+
+                <div class="form-group">
+                    <input type="text" id="todolist" class="form-input" placeholder="Enter name task">
+                </div>
+
+                <div class="form-group">
+                    <label for="home-activity-type">Kind of Activity (Home)</label>
+                    <select id="home-activity-type" class="form-select">
+                        <option value="cleaning">Cleaning</option>
+                        <option value="laundry">Laundry</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="electronic-usage">Electronic?</label>
+                    <select id="electronic-usage" class="form-select">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="partially">Partially</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="electronic-device">Device (Electronic)</label>
+                    <select id="electronic-device" class="form-select">
+                        <option value="none">No Electronics</option>
+                        <option value="vacuum">Vacuum Cleaner</option>
+                        <option value="washing">Washing Machine</option>
+                        <option value="stove">Stove</option>
+                        <option value="ac">AC</option>
+                        <option value="fan">Fan</option>
+                        <option value="tv">Television</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="activity-duration">How Long (Minutes)</label>
+                    <input type="number" id="activity-duration" class="form-input" placeholder="Enter duration in minutes">
+                </div>
+                
+                <div class="form-footer">
+                    <p class="place-recommendation">See place recommendation?</p>
+                    <p class="warning-text">*After saving you can't change the task</p>
+                    <div class="form-buttons">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Activity Tab -->
+            <div class="tab-content" id="tab-online-activity">
+                <h2 class="label-task">Online Activity</h2>
+
+                <div class="form-group">
+                    <input type="text" id="todolist" class="form-input" placeholder="Enter name task">
+                </div>
+
+                <div class="form-group">
+                    <label for="online-activity-type">Kind of Activity (Online)</label>
+                    <select id="online-activity-type" class="form-select">
+                        <option value="meeting">Meeting online</option>
+                        <option value="social">Social Media</option>
+                        <option value="call">Call</option>
+                        <option value="learning">Online Learning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="online-duration">Duration (Minutes)</label>
+                    <input type="number" id="online-duration" class="form-input" placeholder="Enter duration in minutes">
+                </div>
+                
+                <div class="form-group">
+                    <label for="online-device">Device (Online)</label>
+                    <select id="online-device" class="form-select">
+                        <option value="phone">Handphone</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="tablet">Tablet</option>
+                        <option value="pc">PC</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-footer">
+                    <p class="place-recommendation">See place recommendation?</p>
+                    <p class="warning-text">*After saving you can't change the task</p>
+                    <div class="form-buttons">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Going Out Tab -->
+            <div class="tab-content" id="tab-going-out">
+                <h2 class="label-task">Going Out</h2>
+                <div class="form-group">
+                    <input type="text" id="todolist" class="form-input" placeholder="Enter name task">
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle-type">Kind of Vehicle</label>
+                    <select id="vehicle-type" class="form-select">
+                        <option value="walking">Walking</option>
+                        <option value="bike">Bike</option>
+                        <option value="motorcycle">Motorcycle</option>
+                        <option value="car">Car</option>
+                        <option value="train">Train</option>
+                        <option value="bus">Bus</option>
+                        <option value="airplane">Airplane</option>
+                        <option value="ship">Ship</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="round-trip">Round Trip Distance (km)</label>
+                    <input type="number" id="round-trip" class="form-input" placeholder="Enter distance in km">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" class="form-input" placeholder="Enter destination">
+                </div>
+                
+                <div class="form-group">
+                    <label for="occupants">Occupant(s)</label>
+                    <select id="occupants" class="form-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="public">Public Transport</option>
+                    </select>
+                </div>
+                
+                <div class="form-footer">
+                    <p class="place-recommendation">See place recommendation?</p>
+                    <p class="warning-text">*After saving you can't change the task</p>
+                    <div class="form-buttons">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buy Stuff Tab -->
+            <div class="tab-content" id="tab-buy-stuff">
+                <h2 class="label-task">Buy Stuff</h2>
+
+                <div class="form-group">
+                    <input type="text" id="todolist" class="form-input" placeholder="Enter name task">
+                </div>
+
+                <div class="form-group">
+                    <label for="stuff-type">Kind of Stuff (Shopping)</label>
+                    <select id="stuff-type" class="form-select">
+                        <option value="food">Food</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="shopping-method">Online?</label>
+                    <select id="shopping-method" class="form-select">
+                        <option value="online-normal">Online Shopping (Normal Shipping)</option>
+                        <option value="online-express">Online Shopping (Express Shipping)</option>
+                        <option value="manual-transport">Manual (using Transportation)</option>
+                        <option value="manual-no-transport">Manual (without Transportation)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group food-options">
+                    <label for="food-type">If Food</label>
+                    <select id="food-type" class="form-select">
+                        <option value="not-food">Not Food</option>
+                        <option value="beef">Steak (Beef)</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="vegetable">Vegetable</option>
+                        <option value="eggs">Eggs</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="item-weight">Weight (g)</label>
+                    <input type="number" id="item-weight" class="form-input" placeholder="Enter weight in grams">
+                </div>
+                
+                <div class="form-footer">
+                    <p a href="placerec.html">class="place-recommendation">See place recommendation?</a></p>
+                        <p class="warning-text">*After saving you can't change the task</p>
+                    <div class="form-buttons">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Dialog -->
+<div id="confirmation-dialog" class="confirmation-dialog">
+    <div class="dialog-content">
+        <p>See place recommendation?</p>
+        <p class="warning-text">*This function is not fully operational, this data is static!!</p>
+        <div class="dialog-buttons">
+            <button id="cancel-btn" class="cancel-btn">Cancel</button>
+            <a href="placerec.html" id="go-btn" class="confirm-btn">Go</a>
+        </div>
+    </div>
+</div>
+
+    <script src="js/popupTask.js"></script>
+</body>
+</html>

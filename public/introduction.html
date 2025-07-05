@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Carbie</title>
+    <link rel="stylesheet" href="css/introduction.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="pre-loader"></div>
+
+    <header>
+        <div class="container">
+            <img id="logo" src="image/LogoCarbie.svg" height="38px">
+            <nav>
+                <div class="nav-right" id="dropdown-language">
+                    <div>
+                        <div id="language-icon">
+                            <div class="icon-container" id="drop-button-language">
+                                <img src="image/Language-Primary.svg">
+                                <img src="image/Language-Secondary.svg">
+                            </div>
+                            <img src="image/Dropdown-Green.svg">
+                        </div>
+                    </div>
+                    <div id="dropdown-content-language">
+                        <a href="#">EN</a>
+                        <a href="#">ID</a>
+                    </div>
+                </div>
+                <h4 class="nav-right"><a id="login" href="login.html">Login</a></h4>
+                <div class="nav-right">
+                    <button id="nav-button" onclick="location.href='signup.html'">Sign Up Here</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="left-side-text">
+                <h1 class="intro-main-text">Make your day organized while giving attention about carbon that you make</h1>
+                <h4 class="intro-sub-text">Contribute to reduce global warming by paying attention to the carbon your make in your daily basis.</h4>
+                <h3>Sign up your own account</h3>
+                <button class="intro-button" onclick="location.href='signup.html'">Let's get started!</button>
+            </div>
+            <img id="carbie-intro1" src="image/CarbieIntro1.svg">
+        </section>
+
+        <section class="intro-section" id="intro1">
+            <img id="carbie-intro2" src="image/CarbieIntro2.svg">
+            <div class="right-side-text">
+                <h1 class="intro-main-text">Plan all your activities for today and see how much carbon you might make</h1>
+                <h4 class="intro-sub-text">Input your activities plan for a day and see how much carbon footprint there. Organize your day, make ‘em tidy and productive.</h4>
+            </div>
+        </section>
+
+        <section class="intro-section" id="intro2">
+            <div class="left-side-text">
+                <h1 class="intro-main-text">Get a notification if your plan make carbon more than one normal human make</h1>
+                <h4 class="intro-sub-text">A human make almost <span>12.5 kg CO<sub>2</sub></span> each day.  Let’s try to keep it low and stay below it-! You’ll get a heads-up when your plan goes beyond the average.</h4>
+            </div>
+            <img id="carbie-intro3" src="image/CarbieIntro3.svg">
+        </section>
+
+        <section class="intro-section" id="intro3">
+            <img id="carbie-intro4" src="image/CarbieIntro4.svg">
+            <div class="right-side-text">
+                <h1 class="intro-main-text">See some good place to do your plan that can help reduce your carbon</h1>
+                <h4 class="intro-sub-text">Whether it’s a garden walk or a simply cafe visit, we’ll give you a recommendation to friend you spend your plan while still keeping your carbon footprint low!</h4>
+            </div>
+        </section>
+
+        <section class="intro-section" id="intro4">
+            <div class="left-side-text">
+                <h1 class="intro-main-text">Have fun with daily quest and the level up system</h1>
+                <h4 class="intro-sub-text">Earn points and level up your account, build habits that could help the planet and human future.</h4>
+            </div>
+            <img id="carbie-intro5" src="image/CarbieIntro5.svg">
+        </section>
+
+        <section class="intro-section" id="intro5">
+            <img id="carbie-intro6" src="image/CarbieIntro6.svg">
+            <div class="right-side-text">
+                <h1 class="intro-main-text">We will give some personalized activity recomendation that can help you while you were bored</h1>
+                <h4 class="intro-sub-text">From chilling in the home to small adventures in city hall, Keep productive with planet-friendly to do recommended by us.</h4>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="join-section">
+            <h2 id="join-main-text">So what are you waiting for? Sign Up for the new Adventure !</h2>
+            <button class="intro-button" onclick="location.href='signup.html'">Get it Free</button>
+        </div>
+        <h2 id="credit">© 2025 Carbie </h2>
+    </footer>
+
+    <script>
+    const loader = document.getElementById('pre-loader');
+    window.addEventListener('load', () => {
+      setTimeout(() => loader.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Popup</title>
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="share-popup-component">
+        <div id="share-popup">
+            <h2>Woohoo-! Guys see what I got >0< </h2>
+            <hr>
+
+            <!-- carbon-amount diubah sesuai database user -->
+            <h4>I’ve Only Contributed <span id="carbon-amount">10 kg CO<sub>2</sub></span> since using Carbie</h4>
+
+            <!-- carbon-amount diubah sesuai database user -->
+            <div id="total-carbon">
+                <img src="image/Badge.svg">
+                <h4>Total Carbon I ever Make is <span id="carbon-amount">10 kg CO<sub>2</sub></span></h4>
+            </div>
+
+            <h5>Want to see yours too? Join us on Carbie!</h5>
+
+            <div id="share-button-component">
+                <button id="share-cancel-button">Cancel</button>
+                <button id="share-button">Share</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="js/share.js"></script>
+</body>
+</html>

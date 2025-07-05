@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="log-container">
+        <div class="head">
+            <h1 class="head-form">Welcome Back to Carbie!</h1>
+            <h1 class="subhead">Your Friendly Carbon Tracker</h1>
+        </div>
+
+        <!-- ini ada file.phpny dibawah ini -->
+        <div class="form-container">
+            <form id="form-login">
+                <div class="form">
+                    <input type="email" id="email" class="log-input" placeholder="Your Email" required>
+                </div>
+                <div class="form">
+                    <input type="password" id="password" class="log-input" placeholder="Password" required>
+                </div>
+            </form>
+
+            <div class="divider-container">
+                <div class="divider-line"></div>
+                <span class="divider-text">or</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="form">
+                <button type="button" class="guest-mode" id="btn-guest">Guest Mode</button>
+            </div>
+        </div>
+
+    <div class="button-container">
+        <button class="cancel-button" onclick="location.href='introduction.html'">Cancel</button>
+        <button type="submit" class="login-button">Login</button>
+    </div>
+
+        <div class="signup-link">
+            <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up Here</a></p>
+        </div>
+    </div>
+
+    <script>
+    const API = '/api';
+
+    if (localStorage.getItem('carbie_token')) {
+      window.location.href = '/home2.html';
+    }
+
+    // Submit login via AJAX
+    $('#btn-login').on('click', function(e) {
+      e.preventDefault();
+      const email    = $.trim($('#email').val());
+      const password = $.trim($('#password').val());
+      if (!email || !password) {
+        return alert('Please enter email and password.');
+      }
+      $.ajax({
+        url:    `${API}/login`,
+        method: 'POST',
+        data:  { email, password },
+        success(res) {
+          localStorage.setItem('carbie_token', res.data.token);
+          window.location.href = '/home2.html';
+        },
+        error(xhr) {
+          const msg = xhr.responseJSON?.message || 'Login gagal: cek kembali email/password';
+          alert(msg);
+        }
+      });
+    });
+
+    // Clear form
+    $('#btn-cancel').on('click', () => {
+      $('#email, #password').val('');
+    });
+
+    // Guest mode
+    $('#btn-guest').on('click', () => {
+      window.location.href = '/home2.html';
+    });
+  </script>
+</body>
+</html> 
